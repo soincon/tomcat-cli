@@ -1,0 +1,21 @@
+{
+    "name": "tomcat-cli",
+    "version": "1.0.0",
+    "description": "Command line tools to work with Tomcat",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/soincon/tomcat-cli.git"
+    },
+    "bin": {
+        "createWar": "./src/createWar.js",
+        "deployTomcat": "./src/deploy/deploy.mjs"
+    },
+    "dependencies": {
+        "archiver": "^5.1.0",
+        "dotenv": "^10.0.0",
+        "lodash": "^4.17.21",
+        "meow": "^10.1.1",
+        "node-fetch": "^3.1.0"
+    }
+}
