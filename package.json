@@ -1,6 +1,6 @@
 {
     "name": "tomcat-cli",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Command line tools to work with Tomcat",
     "license": "ISC",
     "repository": {
@@ -9,7 +9,7 @@
     },
     "bin": {
         "createWar": "./src/createWar.js",
-        "deployTomcat": "yarn deployTomcat"
+        "deployTomcat": "./src/deploy/deploy.mjs"
     },
     "scripts": {
         "createWar": "./src/createWar.js",
