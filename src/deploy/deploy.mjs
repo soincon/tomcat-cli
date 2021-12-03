@@ -8,7 +8,7 @@ import path from 'path';
 import FormData from 'form-data';
 import { Headers } from 'node-fetch';
 import meow from 'meow';
-import { getTomcatSettings } from './deploy/deployUtils.mjs';
+import { getTomcatSettings } from './deployUtils.mjs';
 
 const lodash = createRequire(import.meta.url)('lodash');
 
