@@ -1,6 +1,6 @@
 {
     "name": "tomcat-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Command line tools to work with Tomcat",
     "license": "ISC",
     "repository": {
