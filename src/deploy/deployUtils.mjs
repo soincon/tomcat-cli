@@ -17,6 +17,11 @@ export const getTomcatSettings = (envConfig, cli) => {
             managerUrl = envManagerUrl;
         }
     }
+    if (cli.flags.verbose) {
+        console.log(`user: ${user}`);
+        console.log(`password: ${password}`);
+        console.log(`managerUrl: ${managerUrl}`);
+    }
     if (!user || !password) {
         console.error('First specify Tomcat user and password. See --help for more info.');
         process.exit(1);

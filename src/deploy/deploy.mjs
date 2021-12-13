@@ -23,6 +23,7 @@ const cli = meow(
     --user Username to login to Tomcat.
     --password Password to Tomcat.
     --tomcat-url Custom URL of Tomcat Manager (e.g. "https://dev.emisuite.es/manager").
+    --verbose Debug information
 
     Command line options overwrite .env options. 
 
@@ -39,6 +40,10 @@ const cli = meow(
             env: {
                 type: 'string',
                 default: 'dev',
+            },
+            verbose: {
+                type: 'boolean',
+                default: false,
             },
         },
     }
@@ -57,6 +62,9 @@ const env = {
 
 const tomcat = getTomcatSettings(env, cli);
 const url = `${tomcat.url}/text/deploy?path=/${lodash.trim(publicUrl, '/')}&update=true`;
+if (cli.flags.verbose) {
+    console.log('URL:', url);
+}
 const war = path.join(process.cwd(), warPath);
 const fileSizeInBytes = fs.statSync(war).size;
 const fileStream = fs.createReadStream(war);
